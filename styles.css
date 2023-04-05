@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+}
+header {
+background-color: rgb(27, 35, 32);
+color: white;
+text-align: center;}
+
+.list{
+    margin-bottom: 4rem;
+    
+}
+.list li{
+    background-color: rgb(156, 156, 209);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list li div{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.list li.completed{
+    background-color: blueviolet;
+    text-decoration: line-through;
+    color:beige
+}
+input[type="checkbox"]{
+    appearance: none;
+    background-color: transparent;
+    margin:0;
+    width: 1.5rem;
+    height:1.5rem;
+    border:2px solid rgb(51, 3, 87);
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+
+}
+
+input[type="checkbox"]::before{
+    content:'!';
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+}
+input[type="checkbox"]:checked{
+    background-color: teal;
+}
+input[type="checkbox"]:checked::before{
+    transform: scale(1);
+}
+.list li button{
+    border:none;
+    background-color: transparent;
+    color: beige;
+}
+.list li button  :hover{
+    color: blue;
+}
+.list li button :active{
+    transition: scale(.10)
+}
+
+.list li span[contenteditable]:hover{
+background-color: pink;
+}
